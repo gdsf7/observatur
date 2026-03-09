@@ -54,6 +54,29 @@ export default function LandingPage() {
                     </div>
                 </div>
             </div>
+
+            {/* Indicadores */}
+            <div>
+                <div>Indicadores Principais</div>
+                <div>Dados e métricas que refletem a dinâmica do turismo na região</div>
+
+                <div>
+                    {/* PeopleIcon */}
+                    <div>Visitantes Anuais</div>
+                    <div>2.5M+</div>
+                </div>
+
+                <div>
+                    <div>Por que precisamos de observatórios?</div>
+                    <div>Os observatórios de turismo são essenciais pois fornecem dados e análises que ajudam na tomada de decisões estratégicas para o desenvolvimento sustentável do setor, não só para os gestores municipais, mas também para o terceiro setor. Eles permitem monitorar tendências, identificar oportunidades e desafios, e subsidiar políticas públicas baseadas em evidências.</div>
+                </div>
+            </div>
+
+            {/* Publicações */}
+            <div>
+                <div>Publicações e Pesquisas</div>
+                <div>Acesse nossos relatórios, boletins informativos e estudos sobre turismo na região</div>
+            </div>
         </>
     );
 }
