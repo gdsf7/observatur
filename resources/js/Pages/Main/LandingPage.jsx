@@ -6,6 +6,8 @@ import {
     Phone, Mail, Map, Search, BarChart2, BookOpen
 } from "lucide-react";
 import fundo from "../../../../public/images/fundo.png";
+import observatorio from "../../../../public/images/observatorio.png";
+import logo_caminhos from "../../../../public/images/logo_caminhos.png";
 
 const cities = [
     { name: "Santa Maria", region: "Quarta Colônia", pop: "283 mil", growth: "+2.5%" },
@@ -63,10 +65,11 @@ export default function LandingPage() {
                 </div>
             </section>
 
+            {/* O Observatório */}
             <section className="py-20 px-6 lg:px-20 bg-[#f9f8f4]">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
-                        <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1000&auto=format&fit=crop" alt="Equipe do Observatório" className="object-cover w-full h-full" />
+                        <img src={observatorio} alt="Equipe do Observatório" className="object-cover w-full h-full" />
                     </div>
 
                     <div className="space-y-6">
@@ -221,8 +224,8 @@ export default function LandingPage() {
                     <div>
                         <div className="flex items-center text-white text-2xl font-bold mb-4">
                             {/* logo */}
-                            <MapPin className="w-8 h-8 text-[#cf5c2a] mr-2" />
-                            <span>Observatório Caminhos do Sul</span>
+                            <img src={logo_caminhos} alt="Logo Caminhos do Sul" className="w-36 h-24 mr-2" />
+                            {/* <span>Observatório Caminhos do Sul</span> */}
                         </div>
                         <p className="max-w-xs leading-relaxed">
                             Sistema de informação e monitoramento da atividade turística na Quarta Colônia e Centro do Rio Grande do Sul.
