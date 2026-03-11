@@ -76,7 +76,25 @@ export default function LandingPage() {
             <div>
                 <div>Publicações e Pesquisas</div>
                 <div>Acesse nossos relatórios, boletins informativos e estudos sobre turismo na região</div>
+                <div>
+                    <div>SheetIcon <span>Relatório</span></div>
+                    <div>Análise de Demanda Turística 2024</div>
+                    <div>Relatório completo sobre os padrões de visitação nas cidades da Quarta Colônia. </div>
+                    <div>CalendarIcon Março 2024</div>
+                    <div>Equipe de Pesquisa</div>
+                    <Link><button>Ler Publicação</button></Link>
+                </div>
+                <div>
+                    <div>Quer receber nossas publicações?</div>
+                    <div>Inscreva-se em nossa newsletter para receber boletins informativos e relatórios em primeira mão</div>
+                    <form>
+                        <input type="email" placeholder="Email" />
+                        <button type="submit">Inscrever-se</button>
+                    </form>
+                </div>
             </div>
+
+           
         </>
     );
 }
