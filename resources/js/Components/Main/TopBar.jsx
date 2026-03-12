@@ -17,22 +17,22 @@ export default function TopBar() {
                 </div>
 
                 <div className="flex items-center gap-x-6 lg:gap-x-10 text-gray-900 font-semibold text-sm lg:text-base tracking-tight">
-                    <Link href="#" className="hover:text-[#cf5c2a] transition duration-200">
+                    <Link href="/#inicio" className="hover:text-[#cf5c2a] transition duration-200">
                         Início
                     </Link>
-                    <Link href="#" className="hover:text-[#cf5c2a] transition duration-200">
+                    <Link href="/#observatorio" className="hover:text-[#cf5c2a] transition duration-200">
                         O Observatório
                     </Link>
-                    <Link href="#" className="hover:text-[#cf5c2a] transition duration-200">
+                    <Link href="/#cidades" className="hover:text-[#cf5c2a] transition duration-200">
                         Cidades
                     </Link>
-                    <Link href="#" className="hover:text-[#cf5c2a] transition duration-200">
+                    <Link href="/#indicadores" className="hover:text-[#cf5c2a] transition duration-200">
                         Indicadores
                     </Link>
-                    <Link href="#" className="hover:text-[#cf5c2a] transition duration-200">
+                    <Link href="/#publicacoes" className="hover:text-[#cf5c2a] transition duration-200">
                         Publicações
                     </Link>
-                    <Link href="#" className="hover:text-[#cf5c2a] transition duration-200">
+                    <Link href="/#contato" className="hover:text-[#cf5c2a] transition duration-200">
                         Contato
                     </Link>
                 </div>

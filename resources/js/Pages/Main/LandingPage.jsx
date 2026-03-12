@@ -39,7 +39,7 @@ export default function LandingPage() {
         <div className="min-h-screen font-sans text-gray-800">
             <TopBar />
 
-            <section className="relative w-full h-screen flex items-center justify-center bg-gray-900">
+            <section className="relative w-full h-screen flex items-center justify-center bg-gray-900" id="inicio" >
                 <img src={fundo} alt="Background" className="absolute inset-0 w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/40"></div>
                 <div className="relative z-10 flex flex-col items-center text-center px-4 mt-16">
@@ -66,7 +66,7 @@ export default function LandingPage() {
             </section>
 
             {/* O Observatório */}
-            <section className="py-20 px-6 lg:px-20 bg-[#f9f8f4]">
+            <section className="py-20 px-6 lg:px-20 bg-[#f9f8f4]" id="observatorio" >
                 <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                     <div className="relative w-full h-[400px] rounded-2xl overflow-hidden shadow-xl">
                         <img src={observatorio} alt="Equipe do Observatório" className="object-cover w-full h-full" />
@@ -106,7 +106,7 @@ export default function LandingPage() {
                 </div>
             </section>
 
-            <section className="py-20 px-6 lg:px-20 bg-white">
+            <section className="py-20 px-6 lg:px-20 bg-white" id="cidades">
                 <div className="max-w-7xl mx-auto text-center mb-12">
                     <h2 className="text-4xl font-bold text-[#cf5c2a] mb-4">Cidades Monitoradas</h2>
                     <p className="text-gray-500 text-lg">Acompanhamos dados e indicadores turísticos em 10 cidades da Quarta Colônia e Centro do Rio Grande do Sul</p>
@@ -141,7 +141,7 @@ export default function LandingPage() {
             </section>
 
             {/* Indicadores */}
-            <section className="py-20 px-6 lg:px-20 bg-[#f9f8f4]">
+            <section className="py-20 px-6 lg:px-20 bg-[#f9f8f4]" id="indicadores">
                 <div className="max-w-7xl mx-auto text-center mb-12">
                     <h2 className="text-4xl font-bold text-[#cf5c2a] mb-4">Indicadores Principais</h2>
                     <p className="text-gray-500 text-lg">Dados e métricas que refletem a dinâmica do turismo na região</p>
@@ -168,7 +168,7 @@ export default function LandingPage() {
             </section>
 
             {/* Publicações */}
-            <section className="py-20 px-6 lg:px-20 bg-white">
+            <section className="py-20 px-6 lg:px-20 bg-white" id="publicacoes">
                 <div className="max-w-7xl mx-auto text-center mb-12">
                     <h2 className="text-4xl font-bold text-[#cf5c2a] mb-4">Publicações e Pesquisas</h2>
                     <p className="text-gray-500 text-lg">Acesse nossos relatórios, boletins informativos e estudos sobre turismo na região</p>
@@ -219,7 +219,7 @@ export default function LandingPage() {
             </section>
 
             {/* Footer */}
-            <footer className="bg-[#2b2b2b] text-gray-400 py-16 px-6 lg:px-20 text-sm">
+            <footer className="bg-[#2b2b2b] text-gray-400 py-16 px-6 lg:px-20 text-sm" id="contato">
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     <div>
                         <div className="flex items-center text-white text-2xl font-bold mb-4">
