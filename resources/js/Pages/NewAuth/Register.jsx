@@ -1,7 +1,27 @@
-export default function RegisterPage(){
+import { useForm } from "@inertiajs/react";
+
+export default function RegisterPage() {
+    const { data, setData, post, errors } = useForm({
+        username: '',
+        email: '',
+        password: '',
+        password_confirmation: '',
+    });
+
+    const registerSubmit = (e) => {
+        e.preventDefault();
+        post(route('registerSubmit'));
+    }
+
     return (
         <>
-        Hello register
+            <form onSubmit={registerSubmit}>
+                <input type="text" value={data.username} onChange={(e) => setData('username', e.target.value)} />
+                <input type="email" value={data.email} onChange={(e) => setData('email', e.target.value)} />
+                <input type="password" value={data.password} onChange={(e) => setData('password', e.target.value)} />
+                <input type="password" value={data.password_confirmation} onChange={(e) => setData('password_confirmation', e.target.value)} />
+                <button type="submit">Enviar</button>
+            </form>
         </>
     );
 }

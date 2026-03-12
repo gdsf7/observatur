@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\NewAuth\LoginController;
 use App\Http\Controllers\NewAuth\LoginOrRegisterController;
+use App\Http\Controllers\NewAuth\RegisterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Welcome\Maincontroller;
 use Illuminate\Foundation\Application;
@@ -23,6 +24,7 @@ Route::get('/login', [LoginOrRegisterController::class, 'LoginPage'])->name('log
 Route::get('/register', [LoginOrRegisterController::class, 'RegisterPage'])->name('register');
 
 Route::post('/login-submit', [LoginController::class, 'LoginSubmit'])->name('loginSubmit');
+Route::post('/register-submit', [RegisterController::class, 'RegisterSubmit'])->name('registerSubmit');
 
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
@@ -34,4 +36,4 @@ Route::post('/login-submit', [LoginController::class, 'LoginSubmit'])->name('log
 //     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 // });
 
-require __DIR__.'/auth.php';
+// require __DIR__.'/auth.php';
