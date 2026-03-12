@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\NewAuth\LoginController;
 use App\Http\Controllers\NewAuth\LoginOrRegisterController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\Welcome\Maincontroller;
@@ -20,6 +21,8 @@ Route::get('/', [Maincontroller::class, 'LandingPage'])->name('LandingPage');
 
 Route::get('/login', [LoginOrRegisterController::class, 'LoginPage'])->name('login');
 Route::get('/register', [LoginOrRegisterController::class, 'RegisterPage'])->name('register');
+
+Route::post('/login-submit', [LoginController::class, 'LoginSubmit'])->name('loginSubmit');
 
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');
