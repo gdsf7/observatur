@@ -35,7 +35,7 @@ const publications = [
 ];
 
 export default function LandingPage() {
-    const {user} = usePage().props.auth.user; 
+    const {user} = usePage().props.auth; 
     return (
         <div className="min-h-screen font-sans text-gray-800">
             <TopBar />
