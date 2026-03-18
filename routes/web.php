@@ -25,6 +25,7 @@ Route::get('/register', [LoginOrRegisterController::class, 'RegisterPage'])->nam
 
 Route::post('/login-submit', [LoginController::class, 'LoginSubmit'])->name('loginSubmit');
 Route::post('/register-submit', [RegisterController::class, 'RegisterSubmit'])->name('registerSubmit');
+Route::post('/logout', [LoginController::class, 'LogoutSubmit'])->name('logout');
 
 // Route::get('/dashboard', function () {
 //     return Inertia::render('Dashboard');

@@ -24,6 +24,13 @@ class LoginController extends Controller
             return redirect()->route('LandingPage');
         }
 
-        return redirect()->route('LoginPage');       
+        return redirect()->route('login');       
+    }
+
+    public function LogoutSubmit(Request $request){
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('LandingPage');
     }
 }

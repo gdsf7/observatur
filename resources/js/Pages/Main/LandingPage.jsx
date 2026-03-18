@@ -46,7 +46,6 @@ export default function LandingPage() {
                 <div className="relative z-10 flex flex-col items-center text-center px-4 mt-16">
                     <h1 className="text-5xl md:text-7xl font-extrabold text-white mb-6 drop-shadow-lg tracking-tight">
                         Descubra os <br /> Caminhos do Sul
-                        {user && <>voce está logado</>}
                     </h1>
                     <p className="text-lg md:text-xl text-gray-200 mb-10 max-w-2xl font-light">
                         Explore dados, pesquisas e insights sobre turismo na Quarta Colônia e Centro do Rio Grande do Sul
