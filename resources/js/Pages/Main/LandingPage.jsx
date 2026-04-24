@@ -9,17 +9,6 @@ import fundo from "../../../../public/images/fundo.png";
 import observatorio from "../../../../public/images/observatorio.png";
 import logo_caminhos from "../../../../public/images/logo_caminhos.png";
 
-const cities = [
-    { name: "Santa Maria", region: "Quarta Colônia", pop: "283 mil", growth: "+2.5%" },
-    { name: "Agudo", region: "Quarta Colônia", pop: "15 mil", growth: "+1.8%" },
-    { name: "Dona Francisca", region: "Quarta Colônia", pop: "3.5 mil", growth: "+0.9%" },
-    { name: "Faxinal do Soturno", region: "Quarta Colônia", pop: "2.8 mil", growth: "+1.2%" },
-    { name: "Ivorá", region: "Quarta Colônia", pop: "2.2 mil", growth: "+0.7%" },
-    { name: "Nova Palma", region: "Quarta Colônia", pop: "2.1 mil", growth: "+1.1%" },
-    { name: "Pinhal Grande", region: "Quarta Colônia", pop: "3.1 mil", growth: "+1.4%" },
-    { name: "Restinga Seca", region: "Quarta Colônia", pop: "4.5 mil", growth: "+1.6%" },
-    { name: "São João do Polêsine", region: "Quarta Colônia", pop: "2.3 mil", growth: "+0.8%" },
-];
 
 const indicators = [
     { title: "Visitantes Anuais", value: "2.5M+", icon: Users },
@@ -34,8 +23,8 @@ const publications = [
     { type: "Estudo", title: "Mapeamento da Oferta Turística Regional", desc: "Inventário completo de atrativos, hospedagem e serviços turísticos.", date: "Janeiro 2024", author: "Equipe de Pesquisa" },
 ];
 
-export default function LandingPage() {
-    const {user} = usePage().props.auth; 
+export default function LandingPage({ cities }) {
+    const { user } = usePage().props.auth;
     return (
         <div className="min-h-screen font-sans text-gray-800">
             <TopBar />
@@ -114,8 +103,8 @@ export default function LandingPage() {
                 </div>
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                    {cities.map((city, idx) => (
-                        <div key={idx} className="bg-[#f9f8f4] rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+                    {cities.map((city) => (
+                        <div key={city.id} className="bg-[#f9f8f4] rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
                             <h3 className="text-xl font-bold mb-1">{city.name}</h3>
                             <div className="flex items-center text-[#cf5c2a] text-sm mb-4 font-medium">
                                 <MapPin className="w-4 h-4 mr-1" />
@@ -127,13 +116,13 @@ export default function LandingPage() {
                                     <div className="flex items-center text-gray-500 mb-1">
                                         <Users className="w-4 h-4 mr-1" /> População
                                     </div>
-                                    <div className="font-bold text-lg">{city.pop}</div>
+                                    <div className="font-bold text-lg">{city.population}</div>
                                 </div>
                                 <div className="text-right">
                                     <div className="flex items-center justify-end text-gray-500 mb-1">
                                         <TrendingUp className="w-4 h-4 mr-1" /> Crescimento
                                     </div>
-                                    <div className="font-bold text-lg text-[#cf5c2a]">{city.growth}</div>
+                                    <div className="font-bold text-lg text-[#cf5c2a]">{city.populational_growth > 0 ? '+' : ''}{city.populational_growth}%</div>
                                 </div>
                             </div>
                         </div>
