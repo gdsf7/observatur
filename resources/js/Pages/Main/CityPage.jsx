@@ -1,4 +1,6 @@
 import TopBar from "@/Components/Main/TopBar";
+import { Link } from "@inertiajs/react";
+import { ArrowLeft } from "lucide-react";
 
 export default function CityPage({ city }) {
     const formatNumber = (num) => {
@@ -15,32 +17,25 @@ export default function CityPage({ city }) {
     return (
         <div className="min-h-screen bg-[#F6F5F0] text-gray-800 font-sans">
             <TopBar />
-            {/* <nav className="absolute top-0 w-full z-20 flex justify-between items-center px-10 py-6 text-white bg-gradient-to-b from-black/60 to-transparent">
-                <div className="text-xl font-bold tracking-widest text-[#9c4b2a] uppercase drop-shadow-md bg-white/90 px-3 py-1 rounded">
-                    Caminhos do Sul
-                </div>
-                <ul className="flex gap-8 text-sm font-medium opacity-90">
-                    <li className="cursor-pointer hover:text-[#9c4b2a] transition-colors">Home</li>
-                    <li className="cursor-pointer border-b-2 border-[#9c4b2a] pb-1 font-semibold">Cidades</li>
-                    <li className="cursor-pointer hover:text-[#9c4b2a] transition-colors">Indicadores</li>
-                    <li className="cursor-pointer hover:text-[#9c4b2a] transition-colors">Publicações</li>
-                    <li className="cursor-pointer hover:text-[#9c4b2a] transition-colors">Contato</li>
-                </ul>
-                <div>
-                    
-                    <svg className="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
-                </div>
-            </nav> */}
 
             {/* Hero Section */}
             <header className="relative h-[65vh] w-full flex flex-col justify-center bg-gray-900">
                 {/* Background Image - using 'image' as instructed */}
-                <img 
-                    src={city.image} 
-                    alt={city.name} 
+
+                <img
+                    src={city.image}
+                    alt={city.name}
                     className="absolute inset-0 w-full h-full object-cover opacity-65"
                 />
-                
+
+                <Link 
+                    href={route('LandingPage') + "#cidades"} 
+                    className="absolute top-28 left-8 z-30 p-3 bg-white/10 hover:bg-white/20 backdrop-blur-md rounded-full text-white transition-all duration-300 shadow-xl group border border-white/20"
+                    title="Voltar para Cidades"
+                >
+                    <ArrowLeft size={24} strokeWidth={2.5} className="group-hover:-translate-x-1 transition-transform" />
+                </Link>
+
                 <div className="relative z-10 max-w-6xl mx-auto w-full px-6 mt-16">
                     <p className="text-sm text-gray-200 font-medium tracking-wide mb-2">
                         Destinos &gt; {city.region || 'Rio Grande do Sul'}
@@ -145,7 +140,7 @@ export default function CityPage({ city }) {
                     <div className="lg:col-span-1">
                         <h2 className="text-3xl font-bold text-[#9c4b2a] mb-4">Explore o Território</h2>
                         <p className="text-gray-600 text-sm mb-8">Navegue pelos principais pontos turísticos, geossítios e equipamentos culturais de {city.name}.</p>
-                        
+
                         {/* Empty State for Spots */}
                         <div className="bg-white/50 border border-dashed border-gray-300 rounded-lg p-6 text-center text-gray-500">
                             <svg className="w-8 h-8 mx-auto text-gray-400 mb-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
@@ -195,7 +190,7 @@ export default function CityPage({ city }) {
                 <div className="bg-white border border-gray-200 rounded-lg p-10 text-center shadow-sm">
                     <p className="text-gray-500 font-medium">Nenhum operador de turismo registrado ainda nesta localidade.</p>
                 </div>
-                
+
                 <div className="mt-8 text-center">
                     <button className="text-green-700 font-semibold text-sm hover:underline inline-flex items-center gap-1">
                         Ver todos os prestadores cadastrados
@@ -232,9 +227,9 @@ export default function CityPage({ city }) {
                     <div>
                         <h5 className="font-bold text-gray-800 text-sm mb-4">Newsletter</h5>
                         <div className="flex">
-                            <input 
-                                type="email" 
-                                placeholder="Seu e-mail" 
+                            <input
+                                type="email"
+                                placeholder="Seu e-mail"
                                 className="bg-[#f2f0e9] border-none text-sm px-4 py-2 w-full focus:ring-0 rounded-l outline-none"
                             />
                             <button className="bg-[#9c4b2a] px-4 py-2 rounded-r flex items-center justify-center text-white">
