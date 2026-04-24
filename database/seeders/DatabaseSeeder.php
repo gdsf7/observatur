@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -4.07,
                 'populational_density' => 30.00,
                 'area' => 534.62,
-                'image' => null,
+                'image' => 'images/agudo.jpg',
             ],
             [
                 'name' => 'Dona Francisca',
@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -3.69,
                 'populational_density' => 26.97,
                 'area' => 114.15,
-                'image' => null,
+                'image' => 'images/dona_franscisca.jpg',
             ],
             [
                 'name' => 'Faxinal do Soturno',
@@ -42,7 +42,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => 0.43,
                 'populational_density' => 39.54,
                 'area' => 169.51,
-                'image' => null,
+                'image' => 'images/faxinal_do_soturno.jpg',
             ],
             [
                 'name' => 'Ivorá',
@@ -51,7 +51,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -10.61,
                 'populational_density' => 15.69,
                 'area' => 122.93,
-                'image' => null,
+                'image' => 'images/ivora.jpg',
             ],
             [
                 'name' => 'Nova Palma',
@@ -60,7 +60,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -11.92,
                 'populational_density' => 17.76,
                 'area' => 314.61,
-                'image' => null,
+                'image' => 'images/nova_palma.jpg',
             ],
             [
                 'name' => 'Pinhal Grande',
@@ -69,7 +69,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -15.29,
                 'populational_density' => 7.96,
                 'area' => 478.11,
-                'image' => null,
+                'image' => 'images/pinhal_grande.jpg',
             ],
             [
                 'name' => 'Restinga Sêca',
@@ -78,7 +78,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -5.71,
                 'populational_density' => 15.42,
                 'area' => 968.62,
-                'image' => null,
+                'image' => 'images/restinga_seca.jpg',
             ],
             [
                 'name' => 'Santa Maria',
@@ -87,7 +87,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => 4.11,
                 'populational_density' => 152.64,
                 'area' => 1780.19,
-                'image' => null,
+                'image' => 'images/santa_maria.png',
             ],
             [
                 'name' => 'São João do Polêsine',
@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => 2.36,
                 'populational_density' => 33.82,
                 'area' => 78.32,
-                'image' => null,
+                'image' => 'images/sao_joao_do_polesine.jpg',
             ],
             [
                 'name' => 'Silveira Martins',
@@ -105,7 +105,7 @@ class DatabaseSeeder extends Seeder
                 'populational_growth' => -16.47,
                 'populational_density' => 17.00,
                 'area' => 119.28,
-                'image' => null,
+                'image' => 'images/silveira_martins.jpg',
             ],
         ];
 
