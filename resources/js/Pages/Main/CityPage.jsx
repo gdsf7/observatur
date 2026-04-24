@@ -1,13 +1,11 @@
-import React from 'react';
+import TopBar from "@/Components/Main/TopBar";
 
 export default function CityPage({ city }) {
-    // Helper to format numbers to Brazilian standards (e.g. 271.735)
     const formatNumber = (num) => {
         if (num === null || num === undefined) return '--';
         return Number(num).toLocaleString('pt-BR');
     };
 
-    // Helper to format growth with + or - sign
     const formatGrowth = (growth) => {
         if (growth === null || growth === undefined) return '--';
         const num = Number(growth);
@@ -16,8 +14,8 @@ export default function CityPage({ city }) {
 
     return (
         <div className="min-h-screen bg-[#F6F5F0] text-gray-800 font-sans">
-            {/* Header / Navbar */}
-            <nav className="absolute top-0 w-full z-20 flex justify-between items-center px-10 py-6 text-white bg-gradient-to-b from-black/60 to-transparent">
+            <TopBar />
+            {/* <nav className="absolute top-0 w-full z-20 flex justify-between items-center px-10 py-6 text-white bg-gradient-to-b from-black/60 to-transparent">
                 <div className="text-xl font-bold tracking-widest text-[#9c4b2a] uppercase drop-shadow-md bg-white/90 px-3 py-1 rounded">
                     Caminhos do Sul
                 </div>
@@ -29,10 +27,10 @@ export default function CityPage({ city }) {
                     <li className="cursor-pointer hover:text-[#9c4b2a] transition-colors">Contato</li>
                 </ul>
                 <div>
-                    {/* Search Icon Placeholder */}
+                    
                     <svg className="w-5 h-5 cursor-pointer" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
                 </div>
-            </nav>
+            </nav> */}
 
             {/* Hero Section */}
             <header className="relative h-[65vh] w-full flex flex-col justify-center bg-gray-900">
