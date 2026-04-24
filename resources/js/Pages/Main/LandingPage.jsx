@@ -104,7 +104,7 @@ export default function LandingPage({ cities }) {
 
                 <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {cities.map((city) => (
-                        <div key={city.id} className="bg-[#f9f8f4] rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
+                        <Link href={route('city', { id: city.id })} key={city.id} className="bg-[#f9f8f4] rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition">
                             <h3 className="text-xl font-bold mb-1">{city.name}</h3>
                             <div className="flex items-center text-[#cf5c2a] text-sm mb-4 font-medium">
                                 <MapPin className="w-4 h-4 mr-1" />
@@ -125,7 +125,7 @@ export default function LandingPage({ cities }) {
                                     <div className="font-bold text-lg text-[#cf5c2a]">{city.populational_growth > 0 ? '+' : ''}{city.populational_growth}%</div>
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     ))}
                 </div>
             </section>

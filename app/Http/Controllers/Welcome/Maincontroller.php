@@ -16,4 +16,14 @@ class Maincontroller extends Controller
             'cities' => $cities
         ]);
     }
+
+    public function CityPage($id){
+        $city = Citie::find($id);
+        // dd($city->toArray());
+        $city->image = asset($city->image);
+        // dd($city->toArray());
+        return Inertia::render('Main/CityPage', [
+            'city' => $city
+        ]);
+    }
 }
