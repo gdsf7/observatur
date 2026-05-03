@@ -110,5 +110,31 @@ class DatabaseSeeder extends Seeder
         ];
 
         Citie::insert($cities);
+
+        $users = [
+            [
+                'first_name' => 'João',
+                'last_name' => 'da Silva',
+                'email' => 'admin@email.com',
+                'password' => bcrypt('password'),
+                'role' => 'Admin',
+            ],
+            [
+                'first_name' => 'Maria',
+                'last_name' => 'da Silva',
+                'email' => 'cityadmin@email.com',
+                'password' => bcrypt('password'),
+                'role' => 'CityAdmin',
+            ],
+            [
+                'first_name' => 'Pedro',
+                'last_name' => 'da Silva',
+                'email' => 'user@email.com',
+                'password' => bcrypt('password'),
+                'role' => 'Usuário',
+            ],
+        ];
+
+        User::insert($users);
     }
 }
